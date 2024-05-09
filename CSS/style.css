@@ -110,6 +110,10 @@ body {
   background-color: var(--color-dark-blue);
 }
 
+.card--shadow{
+  box-shadow: 1px 5px 15px 0px var(--color-light-gray-100);
+}
+
 .card__profil {
   display: flex;
   align-items: center;
