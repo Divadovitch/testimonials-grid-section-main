@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/testimonial-grid-section-with-css-grid-OdW4sa4F7D)
+- Live Site URL: [Live preview](https://divadovitch.github.io/testimonials-grid-section-main/)
 
 
 ### Built with
