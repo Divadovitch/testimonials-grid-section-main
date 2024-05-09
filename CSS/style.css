@@ -1,0 +1,134 @@
+/* variable */
+:root {
+  /* colors */
+  /* alpha */
+  --alpha-50: 0.5;
+  --alpha-70: 0.7;
+
+  /* primary */
+  --color-violet: hsl(263, 55%, 52%);
+  --color-dark-gray: hsl(217, 19%, 35%);
+  --color-dark-blue: hsl(219, 29%, 14%);
+  --color-purple: hsl(264, 84%, 70%);
+
+  /* neutral */
+  --color-light-gray-100: hsl(0, 0%, 81%);
+  --color-light-blue-100: hsl(210, 46%, 95%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* font-family */
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
+
+  /* font-weight */
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+
+  /* spaces */
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2rem;
+}
+/* elements */
+body {
+  background-color: var(--color-light-blue-100);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-medium);
+  font-style: normal;
+  font-size: 0.813rem;
+  color: var(--color-dark-gray);
+}
+
+/* classes */
+.container {
+  min-height: 100svh;
+  max-width: 1132px;
+  padding: var(--space-m);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials {
+  display: grid;
+  gap: var(--space-l);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media screen and (min-width: 1100px) {
+  .testimonials {
+    grid-template-areas:
+      "one one two five"
+      "tree four four five";
+  }
+  .card:nth-child(1) {
+    grid-area: one;
+  }
+  .card:nth-child(2) {
+    grid-area: two;
+  }
+  .card:nth-child(3) {
+    grid-area: tree;
+  }
+  .card:nth-child(4) {
+    grid-area: four;
+  }
+  .card:nth-child(5) {
+    grid-area: five;
+  }
+}
+
+.card {
+  background-color: var(--color-white);
+  padding-inline: var(--space-xl);
+  padding-block: var(--space-l);
+  border-radius: var(--space-s);
+}
+.card img {
+  border: 2px solid var(--color-white);
+}
+.card--dark,
+.card--violet {
+  & img {
+    border-color: var(--color-purple);
+  }
+}
+.card--color {
+  color: var(--color-white);
+}
+.card--violet {
+  background-color: var(--color-violet);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0;
+}
+.card--gray {
+  background-color: var(--color-dark-gray);
+}
+.card--dark {
+  background-color: var(--color-dark-blue);
+}
+
+.card__profil {
+  display: flex;
+  align-items: center;
+  column-gap: var(--space-m);
+}
+.card__profil img {
+  border-radius: 50%;
+  width: var(--space-xl);
+}
+.card__profil__textes > * {
+  margin: 0;
+}
+.card__profil__name {
+  font-size: 0.813rem;
+}
+.card__profil__graduate {
+  font-size: 0.7rem;
+  opacity: var(--alpha-50);
+}
+.card__testimonial__quote {
+  opacity: var(--alpha-70);
+}
